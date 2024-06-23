@@ -12,6 +12,11 @@ void square();
 void cube();
 void squareroot();
 void logr();
+void expr();
+void sinr();
+void cosr();
+void tanr();
+
 
 int main()
 {
@@ -28,7 +33,12 @@ int main()
     cout << "Enter 7  for square \n";
     cout << "Enter 8  for cube \n";
     cout << "Enter 9 for squareroot\n";
-     cout << "Enter 10 for log\n\n";
+    cout << "Enter 10 for log\n";
+    cout << "Enter 11 for exponential\n";
+    cout << "Enter 12 for sin value\n";
+    cout << "Enter 13 for cos value\n";
+    cout << "Enter 14 for tan value\n";
+
     int choice;
     while (1)
     {
@@ -66,6 +76,18 @@ int main()
             break;
         case 10:
             logr();
+            break;
+        case 11:
+            expr();
+            break;
+        case 12:
+            sinr();
+            break;
+        case 13:
+            cosr();
+            break; 
+        case 14:
+            tanr();
             break;
         case 0:
             exit(0);
@@ -169,4 +191,36 @@ void logr()
     cin>>n;
     double lg = log(n);
     cout<<"The log of "<<n<<" is "<<lg<<endl;
+}
+void expr()
+{
+    cout<<"Enter the number you want the exponent of: ";
+    double n;
+    cin>>n;
+    double ex = exp(n);
+    cout<<"The exponent of "<<n<<" is "<<ex<<endl;
+}
+void sinr()
+{
+    cout<<"Enter angle in radian to find its sin value: ";
+    double n;
+    cin>>n;
+    double sn = log(n);
+    cout<<"The sin of "<<n<<" is "<<sn<<endl;
+}
+void cosr()
+{
+    cout<<"Enter angle in radian to find its cos value: ";
+    double n;
+    cin>>n;
+    double cs = cos(n);
+    cout<<"The cos of "<<n<<" is "<<cs<<endl;
+}
+void tanr()
+{
+    cout<<"Enter angle in radian to find its tan value: ";
+    double n;
+    cin>>n;
+    double tn = tan(n);
+    cout<<"The tan of "<<n<<" is "<<tn<<endl;
 }
